@@ -1,0 +1,128 @@
+body {
+  margin: 0;
+  font-family: system-ui, sans-serif;
+  background: #f2f5f9;
+  color: #222;
+}
+
+main {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+h1 {
+  text-align: center;
+}
+
+.note {
+  background: #fff4d6;
+  border-left: 4px solid #e0a800;
+  padding: 10px 14px;
+  border-radius: 6px;
+}
+
+form {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 12px;
+  background: #fff;
+  padding: 16px;
+  border-radius: 8px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.15);
+}
+
+label {
+  display: flex;
+  flex-direction: column;
+  font-weight: bold;
+  gap: 4px;
+}
+
+input {
+  padding: 8px;
+  font-size: 1rem;
+  border: 1px solid #aab;
+  border-radius: 4px;
+}
+
+button {
+  grid-column: 1 / -1;
+  padding: 10px;
+  font-size: 1rem;
+  color: #fff;
+  background: #2f6fdb;
+  border: 0;
+  border-radius: 4px;
+  cursor: pointer;
+  /* Плавные изменения при наведении и нажатии */
+  transition: background 0.2s ease, transform 0.15s ease, box-shadow 0.2s ease;
+}
+
+button:hover {
+  background: #1f58b8;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(31, 88, 184, 0.35);
+}
+
+/* Эффект нажатия */
+button:active {
+  transform: translateY(0) scale(0.98);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+/* Видимая рамка при навигации с клавиатуры (Tab) */
+button:focus-visible {
+  outline: 3px solid #ffb703;
+  outline-offset: 2px;
+}
+
+/* Подсветка поля ввода при фокусе */
+input {
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+input:focus {
+  outline: none;
+  border-color: #2f6fdb;
+  box-shadow: 0 0 0 3px rgba(47, 111, 219, 0.25);
+}
+
+/* Если у пользователя включено "уменьшить анимацию" — убираем движение */
+@media (prefers-reduced-motion: reduce) {
+  button,
+  input {
+    transition: none;
+  }
+  button:hover,
+  button:active {
+    transform: none;
+  }
+}
+
+table {
+  margin: 24px auto;
+  border-collapse: collapse;
+  background: #fff;
+  text-align: center;
+}
+
+th, td {
+  border: 1px solid #ccd;
+  padding: 8px 12px;
+  overflow-wrap: anywhere;
+}
+
+th {
+  background: #2f6fdb;
+  color: #fff;
+}
+
+@media (max-width: 600px) {
+  table {
+    font-size: 0.85rem;
+  }
+  th, td {
+    padding: 6px;
+  }
+}

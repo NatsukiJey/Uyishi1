@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Ro'yxatga olish</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main>
+    <h1>Ro'yxatga olish</h1>
+    <p class="note">
+      Diqqat: kiritilgan ma'lumotlar vaqtinchalik. Sahifani yangilasangiz (refresh), ular o'chib ketadi.
+      Bu faqat shu brauzer sahifasidagi namuna: ma'lumotlar saqlanmaydi va boshqa foydalanuvchilarga ko'rinmaydi.
+    </p>
+
+    <form id="form">
+      <label>Ism
+        <input type="text" name="ism" required autocomplete="off">
+      </label>
+      <label>Familiya
+        <input type="text" name="familiya" required autocomplete="off">
+      </label>
+      <label>Yosh
+        <input type="number" name="yosh" required min="1" step="1">
+      </label>
+      <label>Telefon raqami
+        <input type="tel" name="telefon" required autocomplete="off" placeholder="+998 00 000 00 00">
+      </label>
+      <label>Manzil
+        <input type="text" name="manzil" required autocomplete="off">
+      </label>
+      <button type="submit">Qo'shish</button>
+    </form>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Ism</th>
+          <th>Familiya</th>
+          <th>Yosh</th>
+          <th>Telefon raqami</th>
+          <th>Manzil</th>
+        </tr>
+      </thead>
+      <tbody id="tbody"></tbody>
+    </table>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
